@@ -43,27 +43,48 @@ body {
     }
 }
 
-.mediumwidget, .smallwidget {
+.mediumwidget, .smallwidget, .largewidget {
     border-bottom: 1px solid black;
     padding: 10px 5px;
     .title {
         margin: 5px auto;
         font-size: 14px;
         font-weight: normal;
+        color: rgb(126, 126, 126);
     }
     .maincontent {
+        margin: 5px auto;
         font-size: 16px;
         font-weight: bold;
-        margin: 5px auto;
+        font-family: "Open Sans", sans-serif;
     }
     .time {
+        color: rgb(126, 126, 126);
+        margin: 5px auto;
         font-size: 14px;
         font-weight: normal;
     }
 
 }
+.largewidget {
+    border-bottom: 0;
+    text-align: center;
+    .title {
+        font-size: 18px;
+    }
+    .maincontent {
+        font-size: 24px;
+    }
+    .time {
+        font-size: 18px;
+    }
+}
 .leftwidgets {
     padding: 20px;
     padding-left: 35px;
+}
+.chartcontainer {
+    border-bottom: 1px solid black;
+    padding: 20px;
 }
 

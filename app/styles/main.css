@@ -36,28 +36,53 @@ body {
   margin-right: 15px;
 }
 .mediumwidget,
-.smallwidget {
+.smallwidget,
+.largewidget {
   border-bottom: 1px solid black;
   padding: 10px 5px;
 }
 .mediumwidget .title,
-.smallwidget .title {
+.smallwidget .title,
+.largewidget .title {
   margin: 5px auto;
   font-size: 14px;
   font-weight: normal;
+  color: #7e7e7e;
 }
 .mediumwidget .maincontent,
-.smallwidget .maincontent {
+.smallwidget .maincontent,
+.largewidget .maincontent {
+  margin: 5px auto;
   font-size: 16px;
   font-weight: bold;
-  margin: 5px auto;
+  font-family: "Open Sans", sans-serif;
 }
 .mediumwidget .time,
-.smallwidget .time {
+.smallwidget .time,
+.largewidget .time {
+  color: #7e7e7e;
+  margin: 5px auto;
   font-size: 14px;
   font-weight: normal;
+}
+.largewidget {
+  border-bottom: 0;
+  text-align: center;
+}
+.largewidget .title {
+  font-size: 18px;
+}
+.largewidget .maincontent {
+  font-size: 24px;
+}
+.largewidget .time {
+  font-size: 18px;
 }
 .leftwidgets {
   padding: 20px;
   padding-left: 35px;
+}
+.chartcontainer {
+  border-bottom: 1px solid black;
+  padding: 20px;
 }
