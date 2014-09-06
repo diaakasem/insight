@@ -2,12 +2,16 @@
 
 (function() {
 
-    function controller(scope, Auth, location, $rootScope, AuthEvents) {
+    function controller(scope, Auth, location, $rootScope, AuthEvents, Session) {
 
         scope.credentials = {
             username: '',
             password: ''
         };
+
+        if (Auth.isAuthenticated()) {
+            location.path('/powerview');
+        }
 
         scope.login = function(credentials) {
             Auth.login(credentials).then(function (user) {
@@ -20,7 +24,7 @@
 
     }
 
-    var dependencies = ['$scope', 'Auth', '$location', '$rootScope', 'AuthEvents', controller];
+    var dependencies = ['$scope', 'Auth', '$location', '$rootScope', 'AuthEvents', 'Session', controller];
     angular.module('insightApp').controller('MainCtrl', dependencies);
 
 }).call(null);

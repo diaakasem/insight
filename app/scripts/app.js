@@ -62,15 +62,18 @@
     });
 
     app.run(function($rootScope, Auth, AuthEvents, $location) {
-        $rootScope.$on('$stateChangeStart', function (event, next) {
-            var authorizedRoles = next.data.access;
+
+        $rootScope.$on('$routeChangeStart', function (event, next) {
+            var access = next.access;
             if (!Auth.isAuthorized(access)) {
                 event.preventDefault();
                 if (Auth.isAuthenticated()) {
                     // user is not allowed
+                    console.log("Not authorized");
                     $rootScope.$broadcast(AuthEvents.notAuthorized);
                 } else {
                     // user is not logged in
+                    console.log("Not logged in");
                     $rootScope.$broadcast(AuthEvents.notAuthenticated);
                 }
             }

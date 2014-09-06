@@ -5,7 +5,7 @@
     function Auth(q, http, Session) {
 
         this.logout = function() {
-            this.user = null;
+            Session.destroy();
         };
 
         this.login = function(credentials) {
@@ -14,7 +14,7 @@
 
             var that = this;
             setTimeout(function() {
-                Session.create(0, 0, 'user');
+                Session.create(1, 1, 'user');
                 deferred.resolve(true);
                 //deferred.notify('About to greet ' + name + '.');
 
