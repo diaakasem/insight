@@ -86,3 +86,23 @@ body {
   border-bottom: 1px solid black;
   padding: 20px;
 }
+#alerts .inlinecontainer {
+  margin: 5px auto;
+}
+#alerts .inlinecontainer .form-inline {
+  display: inline-block;
+  width: 120px;
+}
+#alerts .inlinecontainer .form-inline input {
+  height: 26px;
+  padding: 1px 12px;
+}
+#settings {
+  padding-top: 5%;
+}
+#settings .inlinecontainer {
+  margin: 5px auto;
+}
+#settings .inlinecontainer label {
+  min-width: 100px;
+}
