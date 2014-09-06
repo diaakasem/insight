@@ -3,6 +3,7 @@ body {
   padding-top: 0px;
   padding-bottom: 0px;
 }
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -10,11 +11,12 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 /* Custom page header */
 .header {
   /*border-bottom: 1px solid #e5e5e5;*/
-  padding: 20px;
-  background-color: #dedbcb;
+    padding: 20px;
+    background-color: rgb(222, 219, 203);
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -25,13 +27,19 @@ body {
   display: inline-block;
   color: white;
 }
-#main .logincontainer {
-  margin-top: 10%;
+
+#main {
+    .logincontainer {
+        margin-top: 10%;
+        h2 {
+            margin: 10% 0;
+            color: rgb(77, 127, 29);
+        }
+        .form-group.buttons {
+            button {
+                margin-right: 15px;
+            }
+        }
+    }
 }
-#main .logincontainer h2 {
-  margin: 10% 0;
-  color: #4d7f1d;
-}
-#main .logincontainer .form-group.buttons button {
-  margin-right: 15px;
-}
+
